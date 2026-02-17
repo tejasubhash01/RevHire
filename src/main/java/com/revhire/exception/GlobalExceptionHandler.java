@@ -30,7 +30,9 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ApiResponse<Object>> handleAny(Exception ex) {
+        ex.printStackTrace(); // IMPORTANT for now
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                .body(ApiResponse.fail("Internal error"));
+                .body(ApiResponse.fail("Internal error: " + ex.getMessage()));
     }
+
 }
