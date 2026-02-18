@@ -16,5 +16,5 @@ public class RegisterRequest {
     private String password;
 
     @NotNull
-    private Role role; // JOB_SEEKER / EMPLOYER
+    private Role role; 
 }
