@@ -9,5 +9,5 @@ import lombok.Data;
 public class AuthResponse {
     private String email;
     private Role role;
-    private String token; // ✅ added
+    private String token; 
 }
